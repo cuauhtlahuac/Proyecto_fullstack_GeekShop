@@ -45,7 +45,7 @@ export default function NavBar({ badgeNumber }: { badgeNumber?: number }) {
             initial={{ opacity: 0, y: -250 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -250 }}
-            className='bg-white flex flex-col items-start pb-6 absolute w-full z-10 mt-16'
+            className='bg-white flex flex-col items-start pb-6 absolute w-full z-10 mt-16 border-b border-b-zinc-200'
           >
             <Link className='w-full' to='/login'>
               <button className='px-3 py-3 text-lg hover:bg-zinc-200 w-full text-left'>
