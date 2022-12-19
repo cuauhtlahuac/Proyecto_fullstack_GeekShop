@@ -3,9 +3,14 @@ import Button from './Button';
 
 interface ProductCardProps {
   product: ShirtType;
-  onClick?: () => void;
+  onClick?: ({}) => void;
 }
 export default function ProductCard({ onClick, product }: ProductCardProps) {
+
+  const handleOnClick = async () => {
+    onClick?.(product);
+  };
+
   return (
     <div className='h-[240px] text-center grow max-w-[200px] group cursor-pointer relative'>
       <img
@@ -16,7 +21,7 @@ export default function ProductCard({ onClick, product }: ProductCardProps) {
       <h2 className='font-semibold'>{product.title}</h2>
       <p className='text-sm'>{product.price}</p>
       <Button
-        onClick={onClick}
+        onClick={handleOnClick}
         className='hidden group-hover:block absolute top-24 text-sm w-full'
       >
         Agregar a mi bolsa
