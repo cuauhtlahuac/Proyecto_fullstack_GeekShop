@@ -5,7 +5,6 @@
   "scripts": {
     "build": "npm run build:css",
     "dev": "npm run dev:css",
-   // "postinstall": "remix setup node && prisma generate",
     "dev:css": "concurrently \"tailwindcss -w -i tailwind.css -o app/styles/root.css\" \"remix dev\"",
     "build:css": "concurrently \"tailwindcss -m -i tailwind.css -o app/styles/root.css\" \"remix build\""
   },
