@@ -1,6 +1,7 @@
 {
   "private": true,
   "sideEffects": false,
+  "version": "1.0.0",
   "scripts": {
     "build": "npm run build:css",
     "dev": "npm run dev:css",
